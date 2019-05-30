@@ -31,6 +31,14 @@
         }
     </style>
     
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'wh3kmB4I8YJ21zRJpi5Qidto-gzGzoHsz',
+        appKey: 'v1n18fDoodHqdidEHM3kBMFB'
+      })
+    </script>
+    
     <!--<script type="text/javascript">
       if (document.images) {
         var avatar = new Image();
@@ -157,6 +165,10 @@
                 <i class="fa fa-calendar"></i> 2019-05-30
             </span>
             
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -172,6 +184,8 @@
             </p>
             <p>
                 
+                
+                <i class="fa fa-eye"></i>
                 
             </p>
         </center>
@@ -194,6 +208,15 @@
     </div>
 </article>
 
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Hello World'
+    }
+</script>
 
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
@@ -235,6 +258,18 @@
 </aside>
     
     <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
     
     
     <aside id="sidebar-recent_posts">
@@ -410,5 +445,33 @@
 <script src="/js/blog.js"></script>
 
 
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu May 30 2019 21:07:28 GMT+0800'
+      window.commentConfig.owner = 'StarSuomaLi'
+      window.commentConfig.repo = 'comments'
+      window.commentConfig.client_id = 'e1d4ba9ed51afbe58ca0'
+      window.commentConfig.client_secret = 'dfc462036990c4d55ab2dcec8e844b5384094d7f'
+      window.commentConfig.redirect_uri = 'localhost:4000'
+    } else {
+      window.commentConfig = {
+      	id: 'Thu May 30 2019 21:07:28 GMT+0800',
+        owner: 'StarSuomaLi',
+        repo: 'comments',
+        client_id: 'e1d4ba9ed51afbe58ca0',
+        client_secret: 'dfc462036990c4d55ab2dcec8e844b5384094d7f',
+        redirect_uri: 'localhost:4000'
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>

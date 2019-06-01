@@ -10,7 +10,7 @@
     
     
     
-    <title>archive_a | SUOMA</title>
+    <title>Git学习笔记 | SUOMA</title>
     <link href="”https://starsuomali.github.io“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -101,7 +101,7 @@
                 
                 
                 
-                <li class="current">
+                <li class>
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -182,19 +182,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://starsuomali.github.io">SUOMA</a>
         >
-        <span>归档</span>
+        <span>Git学习笔记</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2019/06/01/Git学习笔记/">Git学习笔记</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/note/">note</a>, 
+                
+                <a href="/tags/Git/">Git</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-06-01
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -202,35 +223,109 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2019/06/01/Git学习笔记/">Git学习笔记</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-06-01
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/note/">note</a>, 
+                
+                <a href="/tags/Git/">Git</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2019年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2019/06/01/Git学习笔记/">Git学习笔记</a>
-                        <br>
-            
-             
-                        <a href="/2019/06/01/关于Markdown语法笔笔记/">关于Markdown语法笔记</a>
-                        <br>
-            
-             
-                        <a href="/2019/05/30/hello-world/">Hello World</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <p>Git学习笔记，超好用的版本管理控制工具，工作效率直线上升！</p>
+<a id="more"></a>
+<h1 id="Git学习笔记"><a href="#Git学习笔记" class="headerlink" title="Git学习笔记"></a>Git学习笔记</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="https://baike.baidu.com/item/GIT/12647237?fr=aladdin" title="百度知道" target="_blank" rel="noopener">Git</a>是一种版本控制管理工具，它是开源的。另一个比较有名的工具是<a href="https://baike.baidu.com/item/SVN" title="百度知道" target="_blank" rel="noopener">SVN</a>。<a href="https://baike.baidu.com/item/GIT/12647237?fr=aladdin" title="百度知道" target="_blank" rel="noopener">Git</a>与它的区别是：即使在无网络状态下也可以工作。<a href="https://baike.baidu.com/item/GIT/12647237?fr=aladdin" title="百度知道" target="_blank" rel="noopener">Git</a>可以和<a href="https://baike.baidu.com/item/github" target="_blank" rel="noopener">github</a>（大型的Git托管平台）配合使用，使得代码的重新利用和修改极其的方便。<br><a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">安装Git</a></p>
+<h2 id="初始化一个仓库"><a href="#初始化一个仓库" class="headerlink" title="初始化一个仓库"></a>初始化一个仓库</h2><p>安装号Git之后，打开Git Bash，在一个你想作为仓库的文件夹下（也可以理解为某个项目文件夹），执行<code>git init</code>命令，现在这个文件夹就是一个Git仓库了，它可以控制你项目的版本，像一个时间机器一样。使用<code>ls -a</code>可以看到隐藏的.git文件。</p>
+<p><strong>注</strong>：Git中分为工作区域 暂存区域 以及仓库</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>添加文件到Git工作区中<br><code>git add</code></li>
+<li>将工作区中的内容同步到暂存区域<br><code>git commit -m &quot;同步说明&quot;</code></li>
+<li>查看当前git的同步状态<br><code>git status</code></li>
+<li>查看工作区代码与暂存区代码的区别<br><code>git diff</code><ul>
+<li>比较工作去中某文件与已提交的文件区别<br><code>git diff HEAD -- &lt;filename.ext&gt;</code></li>
+</ul>
+</li>
+<li>查看git版本、同步情况和历史版本<br><code>git log</code><ul>
+<li>控制查看结果为一行<br><code>git log --pretty=oneline</code></li>
+<li>查看历史分支图<br><code>git log --graph --pretty=onelne --abbrev-commit</code>     </li>
+</ul>
+</li>
+<li>查看版本变动后之前的版本号 方便在回退错误后找回<br><code>git reflog</code></li>
+</ul>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><p>git中使用Hashcode来记录不同的版本，每个版本都会在.git文件中记录，当我们需要回退版本或者取消版本回退时，都可以利用下面的命令来进行版本跳跃~</p>
+<ul>
+<li>回退到上上一个版本<br><code>git reset --hard HEAD^^</code><br><code>git reset --hard 上上的版本号</code><ul>
+<li>版本号不用写全，可以只写前几位</li>
+</ul>
+</li>
+<li>撤销暂存区域对应文件的修改<br><code>git reset HEAD -- &lt;filename.ext&gt;</code></li>
+<li>取消工作区中的修改，回退到上一个add或commit<br><code>git checkout -- &lt;filename&gt;</code></li>
+</ul>
+<h2 id="远程仓库命令"><a href="#远程仓库命令" class="headerlink" title="远程仓库命令"></a>远程仓库命令</h2><p>在执行远程仓库命令之前，需要确认你的github上的sshkey生成并且保存了  </p>
+<ol>
+<li>在仓库的终端输入 <code>ssh-keygen -t -C &quot;username&quot;</code> (<strong>注</strong>：username时你github上的用户名)  </li>
+<li>一路回车，根据提示在默认路径下找到ssh文档，复制里面的ssh-sra到github的setting下</li>
+<li>在github上创建一个和本地仓库（文件夹）同名的仓库，使用命令：<code>git remote add origin git@github.com:用户名/仓库命.git</code>(origin为远程仓库名，可以修改，一般默认)  </li>
+<li>通过命令<code>git push -u origin master</code>即可推送本地仓库中的文件到远程仓库中了。首次推送需要加-u，将远程仓库和本地仓库关联起来，之后的所有推送只需要输入<code>git push origin master</code>即可</li>
+<li>在github上新建仓库后，可以直接从远程仓库克隆到本地<ul>
+<li><code>git clone git@github.com:username/respository_name.git</code></li>
+<li><code>git clone https://github.com/username/respository_name.git</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="branch（分支）"><a href="#branch（分支）" class="headerlink" title="branch（分支）"></a>branch（分支）</h2><h3 id="本地分支"><a href="#本地分支" class="headerlink" title="本地分支"></a>本地分支</h3><p>分支的创建有助于项目安全方便的推进，通过分支开发后合并到主分支当中去  </p>
+<ul>
+<li>创建分支：<br><code>git branch branch_name</code> </li>
+<li>切换分支：<br><code>git checkout branch_name</code></li>
+<li>上边俩行命可以合到一起：<br><code>git checkout -b branch_name</code></li>
+<li>合并某分支到当前分支：<br><code>git merge branch_name</code><ul>
+<li>合并分支采用fast-merge方式合并时不会留下历史记录，可强制停用fast模式：<code>git merger --no-ff -m &quot;合并分支并留下记录&quot; branch_name</code> </li>
+</ul>
+</li>
+</ul>
+<p>当合并有分歧的时候，在分歧的文件中Git会用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1文件&lt;&lt;&lt;&lt;&lt;&lt; </span><br><span class="line">分歧内容  </span><br><span class="line">=======</span><br><span class="line">分歧内容  </span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;文件2</span><br></pre></td></tr></table></figure>
+
+<p>的形式标注出来，到对应的文件中修改后，add、commit，再进行merge即可。</p>
+<p>合并分支后可以使用命令删除被合并的分支：<br><code>git branch -d branch_name</code><br>需要删除未同步分支时可将-d 改为-D</p>
+<h3 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h3><ul>
+<li>添加远程分支<ul>
+<li>通过github直接创建branch</li>
+<li>通过本地创建branch后推送到远端<br><code>git push origin remote_branch_name</code>  </li>
+</ul>
+  <strong>注</strong>：在提交分支时，有可能你的搭档已经提交了内容，而与你所提交的内容产生了分歧，此时会报错。首先要通过<code>git pull</code>命令将内容拉取到本地，拉取时可能会拉取失败，因为没有同步分支连接，需要通过命令：<code>git branch --set-upsteam-to=origin/branch_name branch_name</code>可以完成链接。</li>
+<li>删除远程分支<br><code>git push origin :branch_name</code></li>
+<li>删除远程仓库<br><code>git push origin :username/branch_name</code></li>
+<li>将远程分支同步到本地分支<br><code>git checkout -b branch_name orgin/branch_name</code></li>
+</ul>
+<hr>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Git学习笔记'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -358,17 +453,17 @@
 
                 
                 <li>
-                    <a href="/archives/2019/06/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2019/06/01/Git学习笔记/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/06/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2019/06/01/Git学习笔记/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2019/06/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2019/06/01/Git学习笔记/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -376,15 +471,15 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/note/" style="font-size: 12.018578916031446px;" class="tag-cloud-link">note</a>
+    <a href="/tags/note/" style="font-size: 18.028010019269264px;" class="tag-cloud-link">note</a>
     
-    <a href="/tags/Git/" style="font-size: 13.468110699330007px;" class="tag-cloud-link">Git</a>
+    <a href="/tags/Git/" style="font-size: 18.173956796575695px;" class="tag-cloud-link">Git</a>
     
-    <a href="/tags/helloworld/" style="font-size: 18.044497502240592px;" class="tag-cloud-link">helloworld</a>
+    <a href="/tags/helloworld/" style="font-size: 12.044836157936473px;" class="tag-cloud-link">helloworld</a>
     
-    <a href="/tags/Markdown/" style="font-size: 19.466955034048635px;" class="tag-cloud-link">Markdown</a>
+    <a href="/tags/Markdown/" style="font-size: 10.408923856940639px;" class="tag-cloud-link">Markdown</a>
     
-    <a href="/tags/EditTools/" style="font-size: 14.858777462040674px;" class="tag-cloud-link">EditTools</a>
+    <a href="/tags/EditTools/" style="font-size: 9.681073221993188px;" class="tag-cloud-link">EditTools</a>
     
 </div>
                 
@@ -502,7 +597,7 @@
 <script src="https://myau.moe/js/comment/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Sat Jun 01 2019 18:03:50 GMT+0800'
       window.commentConfig.owner = 'StarSuomaLi'
       window.commentConfig.repo = 'comments'
       window.commentConfig.client_id = 'e1d4ba9ed51afbe58ca0'
@@ -510,7 +605,7 @@
       window.commentConfig.redirect_uri = 'https://starsuomali.github.io'
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Sat Jun 01 2019 18:03:50 GMT+0800',
         owner: 'StarSuomaLi',
         repo: 'comments',
         client_id: 'e1d4ba9ed51afbe58ca0',

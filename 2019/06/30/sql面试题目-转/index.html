@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Suoma Li">
+    
+    
+    
+    
+    
+    
+    <title>sql面试题目(转) | SUOMA</title>
+    <link href="”https://starsuomali.github.io“" rel="”prefetch”">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'wh3kmB4I8YJ21zRJpi5Qidto-gzGzoHsz',
+        appKey: 'v1n18fDoodHqdidEHM3kBMFB'
+		serverURLs: 'https://avoscloud.com',
+      })
+    </script>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head></html>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://starsuomali.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">SUOMA</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class>
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class>
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/VersionCtrl/">VersionCtrl</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Java/">Java</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Markdown/">Markdown</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/note/">note</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/Git/">Git</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/helloworld/">helloworld</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class>
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://starsuomali.github.io">SUOMA</a>
+        >
+        <span>sql面试题目(转)</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2019/06/30/sql面试题目-转/">sql面试题目(转)</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/note/">note</a>, 
+                
+                <a href="/tags/sql/">sql</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-06-30
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2019/06/30/sql面试题目-转/">sql面试题目(转)</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-06-30
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/note/">note</a>, 
+                
+                <a href="/tags/sql/">sql</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>SQL常见面试题 转自: Different桐</p>
+<a id="more"></a>
+<h1 id="SQL常见面试题-转-Different桐"><a href="#SQL常见面试题-转-Different桐" class="headerlink" title="SQL常见面试题 (转) Different桐"></a>SQL常见面试题 (转) <a href="https://www.cnblogs.com/diffrent/p/8854995.html" title="Different桐" target="_blank" rel="noopener">Different桐</a></h1><h2 id="1-用一条SQL-语句-查询出每门课都大于80-分的学生姓名"><a href="#1-用一条SQL-语句-查询出每门课都大于80-分的学生姓名" class="headerlink" title="1.用一条SQL 语句 查询出每门课都大于80 分的学生姓名"></a>1.用一条SQL 语句 查询出每门课都大于80 分的学生姓名</h2><p>name   kecheng   fenshu<br>张三    语文       81<br>张三     数学       75<br>李四     语文       76<br>李四     数学       90<br>王五     语文       81<br>王五     数学       100<br>王五     英语       90</p>
+<p>A: select distinct name from table where name not in (select distinct name from table where fenshu&lt;=80)<br>select name from table group by name having min(fenshu)&gt;80</p>
+<h2 id="2-学生表-如下"><a href="#2-学生表-如下" class="headerlink" title="2. 学生表 如下:"></a>2. 学生表 如下:</h2><p>自动编号   学号   姓名 课程编号 课程名称 分数<br>1        2005001 张三 0001     数学    69<br>2        2005002 李四 0001      数学    89<br>3        2005001 张三 0001      数学    69<br>删除除了自动编号不同, 其他都相同的学生冗余信息</p>
+<p>A: delete tablename where 自动编号 not in(select min( 自动编号) from tablename group by学号, 姓名, 课程编号, 课程名称, 分数)</p>
+<h2 id="3-一个叫-team-的表，里面只有一个字段name-一共有4-条纪录，分别是a-b-c-d-对应四个球对，现在四个球对进行比赛，用一条sql-语句显示所有可能的比赛组合"><a href="#3-一个叫-team-的表，里面只有一个字段name-一共有4-条纪录，分别是a-b-c-d-对应四个球对，现在四个球对进行比赛，用一条sql-语句显示所有可能的比赛组合" class="headerlink" title="3.一个叫 team 的表，里面只有一个字段name, 一共有4 条纪录，分别是a,b,c,d, 对应四个球对，现在四个球对进行比赛，用一条sql 语句显示所有可能的比赛组合."></a>3.一个叫 team 的表，里面只有一个字段name, 一共有4 条纪录，分别是a,b,c,d, 对应四个球对，现在四个球对进行比赛，用一条sql 语句显示所有可能的比赛组合.</h2><p>你先按你自己的想法做一下，看结果有我的这个简单吗？</p>
+<p>答：select a.name, b.name<br>from team a, team b<br>where a.name &lt; b.name</p>
+<h2 id="4-请用SQL-语句实现：从TestDB-数据表中查询出所有月份的发生额都比101-科目相应月份的发生额高的科目。请注意：TestDB-中有很多科目，都有1-－12-月份的发生额。"><a href="#4-请用SQL-语句实现：从TestDB-数据表中查询出所有月份的发生额都比101-科目相应月份的发生额高的科目。请注意：TestDB-中有很多科目，都有1-－12-月份的发生额。" class="headerlink" title="4.请用SQL 语句实现：从TestDB 数据表中查询出所有月份的发生额都比101 科目相应月份的发生额高的科目。请注意：TestDB 中有很多科目，都有1 －12 月份的发生额。"></a>4.请用SQL 语句实现：从TestDB 数据表中查询出所有月份的发生额都比101 科目相应月份的发生额高的科目。请注意：TestDB 中有很多科目，都有1 －12 月份的发生额。</h2><p>AccID ：科目代码，Occmonth ：发生额月份，DebitOccur ：发生额。<br>数据库名：JcyAudit ，数据集：Select * from TestDB</p>
+<p>答：select a.*
+from TestDB a<br>,(select Occmonth,max(DebitOccur) Debit101ccur from TestDB where AccID=’101’ group by Occmonth) b<br>where a.Occmonth=b.Occmonth and a.DebitOccur&gt;b.Debit101ccur</p>
+<hr>
+<h2 id="5-面试题：怎么把这样一个表儿"><a href="#5-面试题：怎么把这样一个表儿" class="headerlink" title="5.面试题：怎么把这样一个表儿"></a>5.面试题：怎么把这样一个表儿</h2><p>year   month amount<br>1991   1     1.1<br>1991   2     1.2<br>1991   3     1.3<br>1991   4     1.4<br>1992   1     2.1<br>1992   2     2.2<br>1992   3     2.3<br>1992   4     2.4<br>查成这样一个结果<br>year m1   m2   m3   m4<br>1991 1.1 1.2 1.3 1.4<br>1992 2.1 2.2 2.3 2.4 </p>
+<p>答案一、<br>select year,<br>(select amount from   aaa m where month=1   and m.year=aaa.year) as m1,<br>(select amount from   aaa m where month=2   and m.year=aaa.year) as m2,<br>(select amount from   aaa m where month=3   and m.year=aaa.year) as m3,<br>(select amount from   aaa m where month=4   and m.year=aaa.year) as m4<br>from aaa   group by year</p>
+<hr>
+<h2 id="6-说明：复制表-只复制结构-源表名：a新表名：b"><a href="#6-说明：复制表-只复制结构-源表名：a新表名：b" class="headerlink" title="6. 说明：复制表( 只复制结构, 源表名：a新表名：b)"></a>6. 说明：复制表( 只复制结构, 源表名：a新表名：b)</h2><p>SQL: select * into b from a where 1&lt;&gt;1       (where1=1，拷贝表结构和数据内容)<br>Oracle:create table b</p>
+<p>As</p>
+<p>Select * from a where 1=2</p>
+<p>[&lt;&gt;（不等于）(SQL Server Compact)</p>
+<p>比较两个表达式。 当使用此运算符比较非空表达式时，如果左操作数不等于右操作数，则结果为 TRUE。 否则，结果为 FALSE。]</p>
+<h2 id="7-说明：拷贝表-拷贝数据-源表名：a目标表名：b"><a href="#7-说明：拷贝表-拷贝数据-源表名：a目标表名：b" class="headerlink" title="7. 说明：拷贝表( 拷贝数据, 源表名：a目标表名：b)"></a>7. 说明：拷贝表( 拷贝数据, 源表名：a目标表名：b)</h2><p>SQL: insert into b(a, b, c) select d,e,f from a; </p>
+<h2 id="8-说明：显示文章、提交人和最后回复时间"><a href="#8-说明：显示文章、提交人和最后回复时间" class="headerlink" title="8. 说明：显示文章、提交人和最后回复时间"></a>8. 说明：显示文章、提交人和最后回复时间</h2><p>SQL: select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b</p>
+<h2 id="9-说明：外连接查询-表名1-：a表名2-：b"><a href="#9-说明：外连接查询-表名1-：a表名2-：b" class="headerlink" title="9. 说明：外连接查询( 表名1 ：a表名2 ：b)"></a>9. 说明：外连接查询( 表名1 ：a表名2 ：b)</h2><p>SQL: select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUTER JOIN b ON a.a = b.c</p>
+<p>ORACLE：select a.a, a.b, a.c, b.c, b.d, b.f from a ,b</p>
+<p>where a.a = b.c(+)</p>
+<h2 id="10-说明：日程安排提前五分钟提醒"><a href="#10-说明：日程安排提前五分钟提醒" class="headerlink" title="10. 说明：日程安排提前五分钟提醒"></a>10. 说明：日程安排提前五分钟提醒</h2><p>SQL: select * from 日程安排 where datediff(‘minute’,f 开始时间,getdate())&gt;5</p>
+<h2 id="11-说明：两张关联表，删除主表中已经在副表中没有的信息"><a href="#11-说明：两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="11. 说明：两张关联表，删除主表中已经在副表中没有的信息"></a>11. 说明：两张关联表，删除主表中已经在副表中没有的信息</h2><p>SQL:<br>Delete from info where not exists (select * from infobz where info.infid=infobz.infid )</p>
+<hr>
+<h2 id="12-有两个表A-和B-，均有key-和value-两个字段，如果B-的key-在A-中也有，就把B-的value-换为A-中对应的value"><a href="#12-有两个表A-和B-，均有key-和value-两个字段，如果B-的key-在A-中也有，就把B-的value-换为A-中对应的value" class="headerlink" title="12.有两个表A 和B ，均有key 和value 两个字段，如果B 的key 在A 中也有，就把B 的value 换为A 中对应的value"></a>12.有两个表A 和B ，均有key 和value 两个字段，如果B 的key 在A 中也有，就把B 的value 换为A 中对应的value</h2><p>这道题的SQL 语句怎么写？</p>
+<p>update b set b.value=(select a.value from a where a.key=b.key) where b.id in(select b.id from b,a where b.key=a.key);</p>
+<hr>
+<h2 id="13-高级sql-面试题"><a href="#13-高级sql-面试题" class="headerlink" title="13.高级sql 面试题"></a>13.高级sql 面试题</h2><p>原表:</p>
+<h2 id="courseid-coursename-score"><a href="#courseid-coursename-score" class="headerlink" title="courseid coursename score"></a>courseid coursename score</h2><p>1 Java 70<br>2 oracle 90<br>3 xml 40<br>4 jsp 30</p>
+<h2 id="5-servlet-80"><a href="#5-servlet-80" class="headerlink" title="5 servlet 80"></a>5 servlet 80</h2><p>为了便于阅读, 查询此表后的结果显式如下( 及格分数为60):</p>
+<h2 id="courseid-coursename-score-mark"><a href="#courseid-coursename-score-mark" class="headerlink" title="courseid coursename score mark"></a>courseid coursename score mark</h2><p>1 Java 70 pass<br>2 oracle 90 pass<br>3 xml 40 fail<br>4 jsp 30 fail</p>
+<h2 id="5-servlet-80-pass"><a href="#5-servlet-80-pass" class="headerlink" title="5 servlet 80 pass"></a>5 servlet 80 pass</h2><p>写出此查询语句</p>
+<p>select courseid, coursename ,score ,decode（sign(score-60),-1,’fail’,’pass’) as mark from course</p>
+<p>完全正确</p>
+<p>SQL&gt; desc course_v<br>Name Null? Type</p>
+<hr>
+<p>COURSEID NUMBER<br>COURSENAME VARCHAR2(10)<br>SCORE NUMBER</p>
+<p>SQL&gt; select * from course_v;</p>
+<p>COURSEID COURSENAME SCORE</p>
+<hr>
+<p>1 java 70<br>2 oracle 90<br>3 xml 40<br>4 jsp 30<br>5 servlet 80</p>
+<p>SQL&gt; select courseid, coursename ,score ,decode(sign(score-60),-1,’fail’,’pass’) as mark from course_v;</p>
+<p>COURSEID COURSENAME SCORE MARK</p>
+<hr>
+<p>1 java 70 pass<br>2 oracle 90 pass<br>3 xml 40 fail<br>4 jsp 30 fail<br>5 servlet 80 pass</p>
+<h2 id="SQL面试题（1）"><a href="#SQL面试题（1）" class="headerlink" title="SQL面试题（1）"></a>SQL面试题（1）</h2><p>create table testtable1<br>(
+id int IDENTITY,<br>department varchar(12)<br>)</p>
+<p>select * from testtable1<br>insert into testtable1 values(‘设计’)<br>insert into testtable1 values(‘市场’)<br>insert into testtable1 values(‘售后’)<br>/*
+结果<br>id department<br>1   设计<br>2   市场<br>3   售后<br><em>/
+create table testtable2<br>(
+id int IDENTITY,<br>dptID int,<br>name varchar(12)<br>)
+insert into testtable2 values(1,’张三’)<br>insert into testtable2 values(1,’李四’)<br>insert into testtable2 values(2,’王五’)<br>insert into testtable2 values(3,’彭六’)<br>insert into testtable2 values(4,’陈七’)<br>/</em><br>用一条SQL语句，怎么显示如下结果<br>id dptID department name<br>1   1      设计        张三<br>2   1      设计        李四<br>3   2      市场        王五<br>4   3      售后        彭六<br>5   4      黑人        陈七<br>*/</p>
+<p>答案：</p>
+<p>SELECT testtable2.* , ISNULL(department,’黑人’)<br>FROM testtable1 right join testtable2 on testtable2.dptID = testtable1.ID</p>
+<p>也做出来了可比这方法稍复杂。</p>
+<h2 id="sql面试题（2）"><a href="#sql面试题（2）" class="headerlink" title="sql面试题（2）"></a>sql面试题（2）</h2><p>有表A，结构如下：<br>A: p_ID p_Num s_id<br>1 10 01<br>1 12 02<br>2 8 01<br>3 11 01<br>3 8 03<br>其中：p_ID为产品ID，p_Num为产品库存量，s_id为仓库ID。请用SQL语句实现将上表中的数据合并，合并后的数据为：<br>p_ID s1_id s2_id s3_id<br>1 10 12 0<br>2 8 0 0<br>3 11 0 8<br>其中：s1_id为仓库1的库存量，s2_id为仓库2的库存量，s3_id为仓库3的库存量。如果该产品在某仓库中无库存量，那么就是0代替。</p>
+<p>结果：</p>
+<p>select p_id ,<br>sum(case when s_id=1 then p_num else 0 end) as s1_id<br>,sum(case when s_id=2 then p_num else 0 end) as s2_id<br>,sum(case when s_id=3 then p_num else 0 end) as s3_id<br>from myPro group by p_id</p>
+<h2 id="SQL面试题（3）"><a href="#SQL面试题（3）" class="headerlink" title="SQL面试题（3）"></a>SQL面试题（3）</h2><ol>
+<li><p>触发器的作用？</p>
+<p>答：触发器是一中特殊的存储过程，主要是通过事件来触发而被执行的。它可以强化约束，来维护数据的完整性和一致性，可以跟踪数据库内的操作从而不允许未经许可的更新和变化。可以联级运算。如，某表上的触发器上包含对另一个表的数据操作，而该操作又会导致该表触发器被触发。</p>
+</li>
+<li><p>什么是存储过程？用什么来调用？</p>
+</li>
+</ol>
+<p>答：存储过程是一个预编译的SQL 语句，优点是允许模块化的设计，就是说只需创建一次，以后在该程序中就可以调用多次。如果某次操作需要执行多次SQL ，使用存储过程比单纯SQL 语句执行要快。可以用一个命令对象来调用存储过程。</p>
+<ol start="3">
+<li>索引的作用？和它的优点缺点是什么？</li>
+</ol>
+<p>答：索引就一种特殊的查询表，数据库的搜索引擎可以利用它加速对数据的检索。它很类似与现实生活中书的目录，不需要查询整本书内容就可以找到想要的数据。索引可以是唯一的，创建索引允许指定单个列或者是多个列。缺点是它减慢了数据录入的速度，同时也增加了数据库的尺寸大小。</p>
+<ol start="4">
+<li>什么是内存泄漏？</li>
+</ol>
+<p>答：一般我们所说的内存泄漏指的是堆内存的泄漏。堆内存是程序从堆中为其分配的，大小任意的，使用完后要显示释放内存。当应用程序用关键字new 等创建对象时，就从堆中为它分配一块内存，使用完后程序调用free 或者delete 释放该内存，否则就说该内存就不能被使用，我们就说该内存被泄漏了。</p>
+<ol start="5">
+<li>维护数据库的完整性和一致性，你喜欢用触发器还是自写业务逻辑？为什么？</li>
+</ol>
+<p>答：我是这样做的，尽可能使用约束，如check, 主键，外键，非空字段等来约束，这样做效率最高，也最方便。其次是使用触发器，这种方法可以保证，无论什么业务系统访问数据库都可以保证数据的完整新和一致性。最后考虑的是自写业务逻辑，但这样做麻烦，编程复杂，效率低下。</p>
+<ol start="6">
+<li>什么是事务？什么是锁？</li>
+</ol>
+<p>答：事务就是被绑定在一起作为一个逻辑工作单元的SQL 语句分组，如果任何一个语句操作失败那么整个操作就被失败，以后操作就会回滚到操作前状态，或者是上有个节点。为了确保要么执行，要么不执行，就可以使用事务。要将有组语句作为事务考虑，就需要通过ACID 测试，即原子性，一致性，隔离性和持久性。</p>
+<p>  锁：在所以的 DBMS中，锁是实现事务的关键，锁可以保证事务的完整性和并发性。与现实生活中锁一样，它可以使某些数据的拥有者，在某段时间内不能使用某些数据或数据结构。当然锁还分级别的。</p>
+<ol start="7">
+<li>什么叫视图？游标是什么？</li>
+</ol>
+<p>答：视图是一种虚拟的表，具有和物理表相同的功能。可以对视图进行增，改，查，操作，试图通常是有一个表或者多个表的行或列的子集。对视图的修改不影响基本表。它使得我们获取数据更容易，相比多表查询。</p>
+<p>  游标：是对查询出来的结果集作为一个单元来有效的处理。游标可以定在该单元中的特定行，从结果集的当前行检索一行或多行。可以对结果集当前行做修改。一般不使用游标，但是需要逐条处理数据的时候，游标显得十分重要。</p>
+<ol start="8">
+<li><p>为管理业务培训信息，建立3个表：</p>
+<p> S(S#,SN,SD,SA)S#,SN,SD,SA分别代表学号，学员姓名，所属单位，学员年龄</p>
+<p> C(C#,CN)C#,CN分别代表课程编号，课程名称</p>
+<p> SC(S#,C#,G) S#,C#,G分别代表学号，所选的课程编号，学习成绩</p>
+<ul>
+<li><p>使用标准SQL嵌套语句查询选修课程名称为’税收基础’的学员学号和姓名?</p>
+<p>  答案：select s# ,sn from s where S# in(select S# from c,sc where c.c#=sc.c# and cn=’税收基础’)</p>
+</li>
+<li><p>使用标准SQL嵌套语句查询选修课程编号为’C2’的学员姓名和所属单位?</p>
+<p>  答：select sn,sd from s,sc where s.s#=sc.s# and sc.c#=’c2’</p>
+</li>
+</ul>
+<ul>
+<li><p>使用标准SQL嵌套语句查询不选修课程编号为’C5’的学员姓名和所属单位?</p>
+<p>   答：select sn,sd from s where s# not in(select s# from sc where c#=’c5’)</p>
+</li>
+<li><p>查询选修了课程的学员人数</p>
+<p>   答：select 学员人数=count(distinct s#) from sc</p>
+</li>
+<li><p>查询选修课程超过5门的学员学号和所属单位?</p>
+<p>   答：select sn,sd from s where s# in(select s# from sc group by s# having count(distinct c#)&gt;5)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="SQL面试题（4）"><a href="#SQL面试题（4）" class="headerlink" title="SQL面试题（4）"></a>SQL面试题（4）</h2><p>1.查询A(ID,Name)表中第31至40条记录，ID作为主键可能是不是连续增长的列，完整的查询语句如下：</p>
+<p>select top 10 * from A where ID &gt;(select max(ID) from (select top 30 ID from A order by A ) T) order by A</p>
+<p>2.查询表A中存在ID重复三次以上的记录,完整的查询语句如下：<br>select * from(select count(ID) as count from table group by ID)T where T.count&gt;3</p>
+<p>SQL面试题（5）</p>
+<p>在面试应聘的SQL Server数据库开发人员时，我运用了一套标准的基准技术问题。下面这些问题是我觉得能够真正有助于淘汰不合格应聘者的问题。它们按照从易到难的顺序排列。当你问到关于主键和外键的问题时，后面的问题都十分有难度，因为答案可能会更难解释和说明，尤其是在面试的情形下。</p>
+<p>你能向我简要叙述一下SQL Server 2000中使用的一些数据库对象吗?</p>
+<p>你希望听到的答案包括这样一些对象:表格、视图、用户定义的函数，以及存储过程;如果他们还能够提到像触发器这样的对象就更好了。如果应聘者不能回答这个基本的问题，那么这不是一个好兆头。</p>
+<p>NULL是什么意思?</p>
+<p>NULL(空)这个值是数据库世界里一个非常难缠的东西，所以有不少应聘者会在这个问题上跌跟头您也不要觉得意外。</p>
+<p>NULL这个值表示UNKNOWN(未知):它不表示“”(空字符串)。假设您的SQL Server数据库里有ANSI_NULLS，当然在默认情况下会有，对NULL这个值的任何比较都会生产一个NULL值。您不能把任何值与一个 UNKNOWN值进行比较，并在逻辑上希望获得一个答案。您必须使用IS NULL操作符。</p>
+<p>什么是索引?SQL Server 2000里有什么类型的索引?</p>
+<p>任何有经验的数据库开发人员都应该能够很轻易地回答这个问题。一些经验不太多的开发人员能够回答这个问题，但是有些地方会说不清楚。</p>
+<p>简单地说，索引是一个数据结构，用来快速访问数据库表格或者视图里的数据。在SQL Server里，它们有两种形式:聚集索引和非聚集索引。聚集索引在索引的叶级保存数据。这意味着不论聚集索引里有表格的哪个(或哪些)字段，这些字段都会按顺序被保存在表格。由于存在这种排序，所以每个表格只会有一个聚集索引。非聚集索引在索引的叶级有一个行标识符。这个行标识符是一个指向磁盘上数据的指针。它允许每个表格有多个非聚集索引。</p>
+<p>什么是主键?什么是外键?</p>
+<p>主键是表格里的(一个或多个)字段，只用来定义表格里的行;主键里的值总是唯一的。外键是一个用来建立两个表格之间关系的约束。这种关系一般都涉及一个表格里的主键字段与另外一个表格(尽管可能是同一个表格)里的一系列相连的字段。那么这些相连的字段就是外键。</p>
+<p>什么是触发器?SQL Server 2000有什么不同类型的触发器?</p>
+<p>让未来的数据库开发人员知道可用的触发器类型以及如何实现它们是非常有益的。</p>
+<p>触发器是一种专用类型的存储过程，它被捆绑到SQL Server 2000的表格或者视图上。在SQL Server 2000里，有INSTEAD-OF和AFTER两种触发器。INSTEAD-OF触发器是替代数据操控语言(Data Manipulation Language，DML)语句对表格执行语句的存储过程。例如，如果我有一个用于TableA的INSTEAD-OF-UPDATE触发器，同时对这个表格执行一个更新语句，那么INSTEAD-OF-UPDATE触发器里的代码会执行，而不是我执行的更新语句则不会执行操作。</p>
+<p>AFTER触发器要在DML语句在数据库里使用之后才执行。这些类型的触发器对于监视发生在数据库表格里的数据变化十分好用。</p>
+<p>您如何确一个带有名为Fld1字段的TableB表格里只具有Fld1字段里的那些值，而这些值同时在名为TableA的表格的Fld1字段里?</p>
+<p>这个与关系相关的问题有两个可能的答案。第一个答案(而且是您希望听到的答案)是使用外键限制。外键限制用来维护引用的完整性。它被用来确保表格里的字段只保存有已经在不同的(或者相同的)表格里的另一个字段里定义了的值。这个字段就是候选键(通常是另外一个表格的主键)。</p>
+<p>另外一种答案是触发器。触发器可以被用来保证以另外一种方式实现与限制相同的作用，但是它非常难设置与维护，而且性能一般都很糟糕。由于这个原因，微软建议开发人员使用外键限制而不是触发器来维护引用的完整性。</p>
+<p>对一个投入使用的在线事务处理表格有过多索引需要有什么样的性能考虑?</p>
+<p>你正在寻找进行与数据操控有关的应聘人员。对一个表格的索引越多，数据库引擎用来更新、插入或者删除数据所需要的时间就越多，因为在数据操控发生的时候索引也必须要维护。</p>
+<p>你可以用什么来确保表格里的字段只接受特定范围里的值?</p>
+<p>这个问题可以用多种方式来回答，但是只有一个答案是“好”答案。您希望听到的回答是Check限制，它在数据库表格里被定义，用来限制输入该列的值。</p>
+<p>触发器也可以被用来限制数据库表格里的字段能够接受的值，但是这种办法要求触发器在表格里被定义，这可能会在某些情况下影响到性能。因此，微软建议使用Check限制而不是其他的方式来限制域的完整性。</p>
+<p>如果应聘者能够正确地回答这个问题，那么他的机会就非常大了，因为这表明他们具有使用存储过程的经验。</p>
+<p>返回参数总是由存储过程返回，它用来表示存储过程是成功还是失败。返回参数总是INT数据类型。</p>
+<p>OUTPUT参数明确要求由开发人员来指定，它可以返回其他类型的数据，例如字符型和数值型的值。(可以用作输出参数的数据类型是有一些限制的。)您可以在一个存储过程里使用多个OUTPUT参数，而您只能够使用一个返回参数。</p>
+<p>什么是相关子查询?如何使用这些查询?</p>
+<p>经验更加丰富的开发人员将能够准确地描述这种类型的查询。</p>
+<p>相关子查询是一种包含子查询的特殊类型的查询。查询里包含的子查询会真正请求外部查询的值，从而形成一个类似于循环的状况。</p>
+<p>SQL面试题（6）</p>
+<p>原表: </p>
+<h2 id="courseid-coursename-score-1"><a href="#courseid-coursename-score-1" class="headerlink" title="courseid coursename score "></a>courseid coursename score </h2><p>1 java 70<br>2 oracle 90<br>3 xml 40<br>4 jsp 30 </p>
+<h2 id="5-servlet-80-1"><a href="#5-servlet-80-1" class="headerlink" title="5 servlet 80 "></a>5 servlet 80 </h2><p>为了便于阅读,查询此表后的结果显式如下(及格分数为60): </p>
+<h2 id="courseid-coursename-score-mark-1"><a href="#courseid-coursename-score-mark-1" class="headerlink" title="courseid coursename score mark "></a>courseid coursename score mark </h2><p>1 java 70 pass<br>2 oracle 90 pass<br>3 xml 40 fail<br>4 jsp 30 fail </p>
+<h2 id="5-servlet-80-pass-1"><a href="#5-servlet-80-pass-1" class="headerlink" title="5 servlet 80 pass "></a>5 servlet 80 pass </h2><p>写出此查询语句 </p>
+<p>ORACLE : select courseid, coursename ,score ,decode（sign(score-60),-1,’fail’,’pass’) as mark from course</p>
+<p>(DECODE函数是ORACLE PL/SQL是功能强大的函数之一，目前还只有ORACLE公司的SQL提供了此函数)</p>
+<p>(SQL: select courseid, coursename ,score ,（case when score&lt;60 then ‘fail’ else ‘pass’ end) as mark from course )</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'sql面试题目(转)'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get" action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Suoma Li
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140" alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/30/sql面试题目-转/">sql面试题目(转)</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/18/线程锁synchronied锁定的细节/">线程锁synchronized锁定的细节</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/01/Git学习笔记/">Git学习笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/01/关于Markdown语法笔笔记/">关于Markdown语法笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/01/Git学习笔记/">Git学习笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/05/30/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/18/线程锁synchronied锁定的细节/">线程锁synchronized锁定的细节</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/01/关于Markdown语法笔笔记/">关于Markdown语法笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2019/06/30/sql面试题目-转/">sql面试题目(转)</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2019/06/30/sql面试题目-转/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/06/30/sql面试题目-转/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2019/06/30/sql面试题目-转/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/note/" style="font-size: 16.53471828986323px;" class="tag-cloud-link">note</a>
+    
+    <a href="/tags/Git/" style="font-size: 18.258435334274814px;" class="tag-cloud-link">Git</a>
+    
+    <a href="/tags/helloworld/" style="font-size: 11.940988047494148px;" class="tag-cloud-link">helloworld</a>
+    
+    <a href="/tags/synchronized/" style="font-size: 13.447034349950624px;" class="tag-cloud-link">synchronized</a>
+    
+    <a href="/tags/Markdown/" style="font-size: 14.49210689531353px;" class="tag-cloud-link">Markdown</a>
+    
+    <a href="/tags/EditTools/" style="font-size: 17.02503151753833px;" class="tag-cloud-link">EditTools</a>
+    
+    <a href="/tags/sql/" style="font-size: 15.734623284517356px;" class="tag-cloud-link">sql</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="https://blog.reimu.net/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/StarSuomaLi/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://blog.csdn.net/column/mycolumn.html" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://space.bilibili.com/20851785" target="_blank">B站</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Suoma Li Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":120,"height":240},"react":{"opacity":0.7},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: 'http://psdbqnprc.bkt.clouddn.com/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Sun Jun 30 2019 01:33:00 GMT+0800'
+      window.commentConfig.owner = 'StarSuomaLi'
+      window.commentConfig.repo = 'comments'
+      window.commentConfig.client_id = 'e1d4ba9ed51afbe58ca0'
+      window.commentConfig.client_secret = 'dfc462036990c4d55ab2dcec8e844b5384094d7f'
+      window.commentConfig.redirect_uri = 'https://www.starsuomali.club'
+    } else {
+      window.commentConfig = {
+      	id: 'Sun Jun 30 2019 01:33:00 GMT+0800',
+        owner: 'StarSuomaLi',
+        repo: 'comments',
+        client_id: 'e1d4ba9ed51afbe58ca0',
+        client_secret: 'dfc462036990c4d55ab2dcec8e844b5384094d7f',
+        redirect_uri: 'https://www.starsuomali.club'
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
+
+</html>

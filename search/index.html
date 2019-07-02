@@ -551,8 +551,12 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+        <!-- <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+        <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+    
     
 <!-- END LOCAL -->
 
@@ -561,17 +565,15 @@
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             id: window.location.pathname, 
             owner: 'StarSuomaLi',
             repo: 'comments',
             
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
             oauth: {
             
             
-                proxy_gateway: 'https://www.starsuomali.club',
+                client_secret: '2df1d9e35d2f9ea8efbde4f350397108582af2c9',
             
                 client_id: 'e1d4ba9ed51afbe58ca0'
             }});

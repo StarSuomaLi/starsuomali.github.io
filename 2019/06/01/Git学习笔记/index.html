@@ -820,7 +820,8 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitment({
-            decodeURI(id: window.location.pathname), 
+            id: window.location.pathname, 
+			id: '{{ page.date }}',
             owner: 'StarSuomaLi',
             repo: 'comments',
             

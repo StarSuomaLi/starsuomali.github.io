@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="SUOMA">
 <meta property="og:description" content="Java异常处理 throw、throws、try_catch">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-22T15:37:39.459Z">
+<meta property="og:updated_time" content="2019-07-22T15:40:34.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中的异常处理">
 <meta name="twitter:description" content="Java异常处理 throw、throws、try_catch">
@@ -376,9 +376,10 @@
 <li><em>throw*</em>用于在函数体内语句中，表示抛出一个实际的异常的实际动作，如果在函数内没有捕获并处理，那么将会一直向上抛出这个异常直到被main（）/Thread.run()抛出。<br>当一个函数throws声明函数可能抛出一个非运行时异常（检查异常）时，那么即使这个函数内部不显示使用throw，调用它的上层函数也必须包含处理这个异常的代码 。</li>
 </ul>
 <blockquote>
-<p>1.区别 Error(错误 内存错误等 处理方式： 修改程序)  Exception（异常） 进行处理<br>2.关键字 try  catch finally<br>try(有可能会产生异常的代码）catch(处理方式 “可以不处理”) finally(不管try里面会不会产生异常 和 catch 是否处理掉该异常 finally均会继续执行)<br>catch的参数为可能产生异常的对象<br>当在catch中抛出 throws  Runtime exceotion时  程序终止运行<br>3.throw（在catch里面）  抛出一个异常对象 并可以带参数 抛出异常信息</p>
+<p>1.区别 Error(错误 内存错误等 处理方式： 修改程序)  Exception（异常） 进行处理<br>2.关键字 try  catch finally<br>try(有可能会产生异常的代码）catch(处理方式 “可以不处理”) finally(不管try里面会不会产生异常 和 catch 是否处理掉该异常 finally均会继续执行)<br>catch的参数为可能产生异常的对象<br>当在catch中抛出 throws  Runtime exceotion时  程序终止运行<br>3.throw（在catch里面）  抛出一个异常对象 并可以带参数 抛出异常信息<br>4.throw (在方法名后面)  代表抛出一个异常对象,然后由调用者进行处理 </p>
 </blockquote>
-<h2 id="4-throw-在方法名后面-代表抛出一个异常对象-然后由调用者进行处理"><a href="#4-throw-在方法名后面-代表抛出一个异常对象-然后由调用者进行处理" class="headerlink" title="4.throw (在方法名后面)  代表抛出一个异常对象,然后由调用者进行处理 "></a>4.throw (在方法名后面)  代表抛出一个异常对象,然后由调用者进行处理 </h2>
+<hr>
+
       
     </div>
     
@@ -555,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">1.</span> <span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-throw-在方法名后面-代表抛出一个异常对象-然后由调用者进行处理"><span class="nav-number">2.</span> <span class="nav-text">4.throw (在方法名后面)  代表抛出一个异常对象,然后由调用者进行处理 </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">1.</span> <span class="nav-text">异常处理</span></a></li></ol></div>
             
 
           </div>

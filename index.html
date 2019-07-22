@@ -356,28 +356,14 @@
 
       
         
-          
-            <h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>Java中的异常体系的基类是<strong>Throwable</strong>，它主要又两个子类：<strong>Error和Exception</strong>。</p>
-<ul>
-<li><p><strong>Error</strong>是指程序无法处理的错误，这类错误大多与开发人员无关。</p>
-</li>
-<li><p><strong>Exception</strong>主要分为两块：运行时异常和非运行时异常。运行时异常为<strong>RuntimeException</strong>以及其子类。除此之位的Exception类子类均为非运行时异常。</p>
-<ul>
-<li>运行时异常：NullpointException、indexoutofboundsException、ClassCastException等。<br>运行时异常多指程序逻辑上出现问题（也就是自己写的代码逻辑出了问题），这类异常都可以通过逻辑出来来避免（比如判断语句判断是否越界、是否属于某类型、是否为null），所以编译器将这些错误交给程序员来把控，在编译期即使手动抛出了一个运行时异常不去捕获，编译器也会通过。因为这类异常叫做“未检查异常（uncheck）”。同样属于未检查异常的还有Error。</li>
-<li>非运行时异常：IOException、lClassNotFoundException等。<br>又称作检查异常（check）。对于检查异常，在可能发生异常的位置需要用try-catch块去捕获异常并处理，如果不处理，它就会向上上层一直调用抛出，直到被处理为止。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>throw 与 throws</strong></li>
-<li><em>throws*</em>关键字要在方法签名中使用，用于声明该方法可能抛出异常。<strong>throws</strong>可以理解成时一种通知行为，没有实际的抛出异常的动作，而仅仅是告诉调用他的上层函数，这里可能会抛出这个异常；</li>
-<li><em>throw*</em>用于在函数体内语句中，表示抛出一个实际的异常的实际动作，如果在函数内没有捕获并处理，那么将会一直向上抛出这个异常直到被main（）/Thread.run()抛出。<br>当一个函数throws声明函数可能抛出一个非运行时异常（检查异常）时，那么即使这个函数内部不显示使用throw，调用它的上层函数也必须包含处理这个异常的代码 。</li>
-</ul>
-<blockquote>
-<p>1.区别 Error(错误 内存错误等 处理方式： 修改程序)  Exception（异常） 进行处理<br>2.关键字 try  catch finally<br>try(有可能会产生异常的代码）catch(处理方式 “可以不处理”) finally(不管try里面会不会产生异常 和 catch 是否处理掉该异常 finally均会继续执行)<br>catch的参数为可能产生异常的对象<br>当在catch中抛出 throws  Runtime exceotion时  程序终止运行<br>3.throw（在catch里面）  抛出一个异常对象 并可以带参数 抛出异常信息</p>
-</blockquote>
-<h2 id="4-throw-在方法名后面-代表抛出一个异常对象-然后由调用者进行处理"><a href="#4-throw-在方法名后面-代表抛出一个异常对象-然后由调用者进行处理" class="headerlink" title="4.throw (在方法名后面)  代表抛出一个异常对象,然后由调用者进行处理 "></a>4.throw (在方法名后面)  代表抛出一个异常对象,然后由调用者进行处理 </h2>
-          
+          <p>Java异常处理 throw、throws、try_catch</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/22/Java中的异常处理/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
